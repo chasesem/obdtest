@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@drawable/me_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <com.alexzh.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:clickable="false"
+            android:src="@drawable/ac"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:view_backgroundColor="@color/colorPrimary"
+            app:view_shadowRadius="2dp"
+            app:view_shadowDx="2dp"
+            app:view_shadowDy="0dp"
+            app:view_shadowColor="@color/white"
+            app:view_borderWidth="2dp"
+            app:view_borderColor="@color/white"/>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_marginTop="5dp"
+        android:id="@+id/me_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+</LinearLayout>

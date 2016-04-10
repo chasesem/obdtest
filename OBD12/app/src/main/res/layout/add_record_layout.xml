@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray">
+
+    <Button
+        android:textColor="@color/white"
+        android:background="@drawable/save_record_btn"
+        android:text="@string/save"
+        android:id="@+id/save_recode_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_below="@id/save_recode_btn"
+        android:id="@+id/time_layout"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_time_choice"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            tools:text="2016-01-01 00:00"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_below="@+id/time_layout"
+        android:id="@+id/mileage_layout"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/current_mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ed_mileage"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:inputType="number"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:text="@string/kilometre"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/mileage_layout"
+        android:id="@+id/event_layout"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:text="@string/event_type"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/cb_maintain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/maintain" />
+
+                <RadioButton
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/cb_repair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/repair"
+                    />
+
+                <RadioButton
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/cb_insurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/insurance"/>
+
+                <RadioButton
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/cb_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/other" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/event_layout"
+        android:id="@+id/cost_layout"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:inputType="number"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ed_cost"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:inputType="number"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:text="@string/yuan"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/other_layout"
+        android:background="@color/white"
+        android:layout_below="@+id/cost_layout"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_other"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/record_grid_layout"
+        android:layout_below="@+id/other_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/record_grid_layout"/>
+
+
+    </RelativeLayout>
+
+
+
+    <include layout="@layout/time_choice_layout"/>
+
+
+
+
+
+</RelativeLayout>

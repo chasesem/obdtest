@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OBD2MonitorMainActivity" >
+
+    <!--<TextView-->
+    <!--android:focusable="true"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="35dp"-->
+
+    <!--android:hint="@string/connected_status"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/connected_status_text"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/response_msg_text"
+        android:background="@color/bg_gray"
+        android:scrollbars="vertical"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/supported_pids"
+        android:id="@+id/supported_pids_text"
+        android:layout_marginTop="180dp"
+        android:scrollbars="horizontal"
+        android:background="@color/bg_gray"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center|left"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="@string/input_command"
+        android:id="@+id/input_cmd_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12.5dp"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginTop="230dp"/>
+
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/send_command"
+        android:id="@+id/send_cmd_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_below="@+id/send_cmd_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/send_timer_command"
+        android:id="@+id/send_timer_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_below="@+id/send_timer_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/timer_cancel"
+        android:id="@+id/timer_cancel_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:enabled="false"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_text"
+        android:layout_below="@+id/send_cmd_btn"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/select_device"
+        android:id="@+id/select_device_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12.5dp"
+        android:layout_marginBottom="15dp"/>
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/disconnect_device"
+        android:id="@+id/disconnect_device_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:enabled="false"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

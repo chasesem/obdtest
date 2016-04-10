@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.baidumapshow.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <!-- 顶部搜索 -->
+    <RelativeLayout
+        android:id="@+id/MyLayout_top"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="0dip" >
+            <EditText android:id="@+id/city_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="#ffffff"
+                android:textSize="15dp"
+                android:hint="输入城市"
+                android:layout_weight="15" />
+            <EditText android:id="@+id/keyword_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="#ffffff"
+                android:textSize="15dp"
+                android:hint="输入关键词"
+                android:layout_weight="25" />
+            <Button android:id="@+id/query_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:text="搜索" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 底部添加按钮 -->
+    <RelativeLayout
+        android:id="@+id/MyLayout_bottom"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true" >
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimaryDark"
+                android:text="定位" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 显示图片 -->
+    <RelativeLayout
+        android:id="@+id/Content_Layout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/MyLayout_bottom"
+        android:layout_below="@id/MyLayout_top"
+        android:gravity="center">
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+    </RelativeLayout>
+</RelativeLayout>
+
